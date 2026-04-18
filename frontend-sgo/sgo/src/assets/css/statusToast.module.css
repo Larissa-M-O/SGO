@@ -1,0 +1,53 @@
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px; /* 🔥 melhor que left (padrão de toast) */
+  padding: 14px 22px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
+  z-index: 99999; /* 🔥 garante que fica acima de tudo */
+  animation: fadeIn 0.3s ease, fadeOut 0.3s ease 2.7s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* 🔥 destaque */
+  min-width: 250px;
+  max-width: 350px;
+  word-wrap: break-word;
+}
+
+/* Cores */
+.success {
+  background-color: #28a745;
+}
+
+.warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.error {
+  background-color: #dc3545;
+}
+
+/* Animação entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🔥 Animação saída suave */
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}

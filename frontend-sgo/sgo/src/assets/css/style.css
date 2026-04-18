@@ -1,0 +1,567 @@
+/* ===== GLOBAL ===== */
+body {
+  background-color: #d7ebff;
+}
+
+.layout-container {
+  min-height: 100vh;
+}
+
+/* ===== MENU LATERAL ===== */
+.sidebar {
+  width: 250px;
+  background-color: #0f172a;
+}
+
+.sidebar-title {
+  color: white;
+}
+
+.sidebar-item {
+  color: white;
+}
+
+.sidebar-item.active {
+  background-color: #f8f9fa;
+  color: black;
+  font-weight: bold;
+}
+
+.sidebar-submenu {
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+/* ===== USER FOOTER ===== */
+.user-avatar {
+  border-radius: 50%;
+}
+
+/* ===== NAV SUPERIOR ===== */
+.topbar {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.topbar-button {
+  background-color: #1e3a8a;
+  color: white;
+  border-radius: 20px;
+}
+
+/* ===== RODAPÉ ===== */
+.footer {
+  color: black;
+}
+
+/* ================= usuario ================= */
+
+.usuarios-container {
+  padding: 20px;
+}
+
+.usuarios-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-busca {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background-color: #b4b4b4;
+}
+
+.btn-novo-usuario {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.btn-novo-usuario:hover {
+  background-color: #162d6b;
+}
+
+.usuarios-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/* ===== Usuario visualizar ====== */
+
+.container-visualizar {
+  padding: 20px;
+}
+
+.card-usuario {
+  background: #eaeaea;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #aaa;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.linha div {
+  width: 45%;
+}
+
+span {
+  font-weight: bold;
+}
+
+h2 {
+  margin: 5px 0;
+}
+
+hr {
+  border: 1px solid #444;
+  margin: 15px 0;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-remover {
+  background: #ff2d2d;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-editar {
+  background: #d9963a;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ====== editar usuario ==== */
+
+.container-form {
+  padding: 20px;
+}
+
+.card-form {
+  background: #eaeaea;
+  border-radius: 10px;
+  padding: 20px;
+  border: 2px solid #aaa;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.linha {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.linha div {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #777;
+  background: #cfcfcf;
+}
+
+hr {
+  border: 1px solid #333;
+  margin: 15px 0;
+}
+
+.area-botao {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.btn-salvar {
+  background: #12b45c;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ================= Usuario Cadastrar ================= */
+
+.container-form {
+  padding: 20px;
+}
+
+.card-form {
+  background: #d9d9d9;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid #999;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-actions {
+  text-align: right;
+}
+
+.btn-submit {
+  background: #16a34a;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #15803d;
+}
+
+
+/* ====== obras ======== */
+
+.status {
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+}
+
+.status-concluido {
+  background: #10b981; /* verde */
+}
+
+.status-nao-iniciado {
+  background: #9ca3af; /* cinza */
+}
+
+.status-andamento {
+  background: #f59e0b; /* amarelo */
+}
+
+.status-encerrado {
+  background: #ef4444; /* vermelho */
+}
+
+.btn-visualizar {
+  background: #f97316;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card-obras {
+  background: #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-novo {
+  background: #1e3a8a;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+
+.tabela-header,
+.tabela-linha {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  padding: 12px;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabela-header {
+  font-weight: bold;
+  background: #d7ebff;
+}
+
+/* =========== obras-visualizar ============= */
+
+.container-obra {
+  padding: 20px;
+}
+
+.card-obra {
+  background: #d9d9d9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.campo {
+  background: #eee;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.campo strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.linha-dupla {
+  display: flex;
+  gap: 15px;
+}
+
+.linha-dupla .campo {
+  flex: 1;
+}
+
+.acoes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-remover {
+  background: #ff2d2d;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-alterar {
+  background: #ff7a1a;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-remover:hover {
+  opacity: 0.8;
+}
+
+.btn-alterar:hover {
+  opacity: 0.8;
+}
+
+/* ======= obra-cadastrar ========*/
+
+input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  background: #ccc;
+}
+
+.selecao{
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  background: #ccc;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.centro {
+  justify-content: center;
+}
+
+.btn-cadastrar {
+  background: #18a558;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-cadastrar:hover {
+  opacity: 0.85;
+}
+
+/* espaçamento entre filtros */
+.filtros-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+/* selects e input padrão */
+.filtros-inputs select,
+.filtros-inputs input {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* input cliente quebra linha */
+.filtro-cliente {
+  flex-basis: 100%;
+  margin-top: 0px;
+  max-width: 200px;
+}
+
+/* mensagem quando não tem dados */
+.mensagem-vazia {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+  font-size: 16px;
+}
+
+/* ======= Recursos ====== */
+.container-recursos {
+  padding: 20px;
+}
+
+/* TOPO */
+.topo-recursos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input-busca {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  background: #ccc;
+}
+
+.btn-novo {
+  background: #2f4fa3;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* HEADER */
+.header-lista {
+  display: grid;
+  grid-template-columns: 80px 30px 1fr 30px 1fr 200px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* CARD */
+.card-recurso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #999;
+}
+
+/* INFO */
+.info {
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.descricao {
+  font-weight: 600;
+}
+
+.tipo {
+  font-weight: 600;
+}
+
+/* BOTÕES */
+.acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-editar {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-remover {
+  background: red;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+}
