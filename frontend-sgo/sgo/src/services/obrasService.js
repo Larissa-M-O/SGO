@@ -22,6 +22,10 @@ export function buscarObrasPorCliente(cliente) {
   return request(`${BASE}/cliente?cliente=${cliente}`);
 }
 
+export function buscarObrasPorResponsavel(responsavel) {
+  return request(`${BASE}/responsavel?responsavel=${responsavel}`);
+}
+
 // 🔹 POST - criar obra
 export function criarObra(data) {
   return request(BASE, {
