@@ -4,25 +4,25 @@ const BASE = "/apis/usuarios";
 
 // 🔹 GET - listar
 export function listarUsuarios() {
-  return request(BASE);
+  return request(`${BASE}/admin`);
 }
 
 export function listarClientes() {
-  return request(`${BASE}/nivel?nivel=${3}`);
+  return request(`${BASE}/nivel/admin?nivel=${3}`);
 }
 
 export function listarResposaveis() {
-  return request(`${BASE}/nivel?nivel=${2}`);
+  return request(`${BASE}/nivel/admin?nivel=${2}`);
 }
 
 // 🔹 GET - buscar por nome
 export function buscarPorNome(nome) {
-  return request(`${BASE}/nome?nome=${nome}`);
+  return request(`${BASE}/nome/admin?nome=${nome}`);
 }
 
 // 🔹 POST - criar física
 export function criarPessoaFisica(data) {
-  return request(`${BASE}/fisica`, {
+  return request(`${BASE}/fisica/cliente`, {
     method: "POST",
     body: JSON.stringify(data),
   });
@@ -30,7 +30,7 @@ export function criarPessoaFisica(data) {
 
 // 🔹 POST - criar jurídica
 export function criarPessoaJuridica(data) {
-  return request(`${BASE}/juridica`, {
+  return request(`${BASE}/juridica/admin`, {
     method: "POST",
     body: JSON.stringify(data),
   });
@@ -38,7 +38,7 @@ export function criarPessoaJuridica(data) {
 
 // 🔹 PUT - atualizar física
 export function atualizarPessoaFisica(data) {
-  return request(`${BASE}/fisica`, {
+  return request(`${BASE}/fisica/cliente`, {
     method: "PUT",
     body: JSON.stringify(data),
   });
@@ -46,7 +46,7 @@ export function atualizarPessoaFisica(data) {
 
 // 🔹 PUT - atualizar jurídica
 export function atualizarPessoaJuridica(data) {
-  return request(`${BASE}/juridica`, {
+  return request(`${BASE}/juridica/cliente`, {
     method: "PUT",
     body: JSON.stringify(data),
   });
@@ -54,11 +54,11 @@ export function atualizarPessoaJuridica(data) {
 
 // 🔹 DELETE
 export function deletarPessoa(id) {
-  return request(`${BASE}?id=${id}`, {
+  return request(`${BASE}/admin?id=${id}`, {
     method: "DELETE",
   });
 }
 
 export function buscarUsuarioId(id) {
-  return request(`${BASE}/id?id=${id}`);
+  return request(`${BASE}/id/cliente?id=${id}`);
 }
