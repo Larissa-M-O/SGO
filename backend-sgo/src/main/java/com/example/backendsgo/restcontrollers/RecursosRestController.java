@@ -8,44 +8,43 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("apis/recursos")
 public class RecursosRestController {
     @Autowired
     private RecursosService recursosService;
 
-    @GetMapping
+    @GetMapping("/engenheiro")
     public ResponseEntity<Object> getRecursos(){
         List<Recursos> recursos = recursosService.listarRecursos();
         return ResponseEntity.ok(recursos);
     }
 
-    @GetMapping("/descricao")
+    @GetMapping("/descricao/engenheiro")
     public ResponseEntity<Object> getDescricao(@RequestParam("descricao") String descricao){
         List<Recursos> recursos = recursosService.recursoByDescricao(descricao);
         return ResponseEntity.ok(recursos);
     }
 
-    @GetMapping("/id")
+    @GetMapping("/id/engenheiro")
     public ResponseEntity<Object> getDescricaoId(@RequestParam("id") Long id) {
         Recursos  recurso = recursosService.recursoById(id);
         return ResponseEntity.ok(recurso);
     }
 
-    @PostMapping
+    @PostMapping("/engenheiro")
     public ResponseEntity<Object> createRecurso(@RequestBody Recursos recurso){
         Recursos novoRecurso = recursosService.salvar(recurso);
         return ResponseEntity.ok(novoRecurso);
     }
 
-    @PutMapping
+    @PutMapping("/engenheiro")
     public ResponseEntity<Object> updateRecurso(@RequestBody Recursos recurso){
         Recursos recursoAtualizado = recursosService.salvar(recurso);
         return ResponseEntity.ok(recursoAtualizado);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/engenheiro")
     public ResponseEntity<Object> deleteRecurso(@RequestParam("id") Long id){
         recursosService.deletar(id);
         return ResponseEntity.noContent().build();

@@ -53,6 +53,9 @@ public class Login {
         this.senha = senha;
     }
 
+    public Pessoa getPessoa() {
+        return pessoa;
+    }
 
     public void setPessoa(Pessoa pessoa) {
         this.pessoa = pessoa;

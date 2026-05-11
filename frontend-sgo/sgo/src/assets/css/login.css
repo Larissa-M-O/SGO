@@ -119,3 +119,20 @@ body {
     font-size: 42px;
   }
 }
+
+.register-link {
+  margin-top: 18px;
+  text-align: center;
+}
+
+.register-link a {
+  text-decoration: none;
+  color: #2196f3;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.register-link a:hover {
+  color: #1976d2;
+  text-decoration: underline;
+}

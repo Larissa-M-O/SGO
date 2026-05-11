@@ -12,6 +12,7 @@ import com.example.backendsgo.repositories.PessoaJuridicaRepository;
 import com.example.backendsgo.repositories.PessoaRepository;
 import com.example.backendsgo.exception.BadRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,6 +29,8 @@ public class PessoaService {
     private PessoaJuridicaRepository JuridicaRepository;
     @Autowired
     private PessoaRepository PessoaRepository;
+    @Autowired
+    private BCryptPasswordEncoder passwordEncoder;
 
     private boolean validarCPF(String cpf) {
         if (cpf == null)
@@ -106,10 +109,14 @@ public class PessoaService {
                         pessoaCOM.getIdentificacao());
                 pessoaF = FisicaRepository.save(pessoaF);
 
-                Login login = new Login(novaPessoa,
+                String senhaCriptografada =
+                        passwordEncoder.encode(pessoaCOM.getIdentificacao());
+
+                Login login = new Login(
+                        novaPessoa,
                         novaPessoa.getEmail(),
-                        pessoaCOM.
-                                getIdentificacao());
+                        senhaCriptografada
+                );
                 login = loginRepository.save(login);
             }
             else {
@@ -196,9 +203,14 @@ public class PessoaService {
                         pessoaCOM.getIdentificacao());
                 pessoaJ = JuridicaRepository.save(pessoaJ);
 
-                Login login = new Login(novaPessoa,
-                        novaPessoa.getEmail(), pessoaCOM.
-                        getIdentificacao());
+                String senhaCriptografada =
+                        passwordEncoder.encode(pessoaCOM.getIdentificacao());
+
+                Login login = new Login(
+                        novaPessoa,
+                        novaPessoa.getEmail(),
+                        senhaCriptografada
+                );
                 login = loginRepository.save(login);
             }
         }else {

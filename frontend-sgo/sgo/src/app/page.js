@@ -111,6 +111,10 @@ export default function Login() {
             Entrar
           </button>
 
+          <div className="register-link">
+            <a href="/cadastro">Criar cadastro</a>
+          </div>
+
         </form>
 
       </div>
