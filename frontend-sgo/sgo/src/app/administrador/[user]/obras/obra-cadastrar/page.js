@@ -7,6 +7,8 @@ import StatusToast from "@/app/Componentes/StatusToast";
 import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 
+import Select from "react-select";
+
 export default function CadastrarObra() {
   const { user } = useParams();
   const [toast, setToast] = useState({
@@ -18,6 +20,9 @@ export default function CadastrarObra() {
   
   const [clientes, setClientes] = useState([]);
   const [responsaveis, setResponsaveis] = useState([]);
+
+  const [buscaCliente, setBuscaCliente] = useState("");
+  const [buscaResponsavel, setBuscaResponsavel] = useState("");
 
   const [form, setForm] = useState({
     cliente: "",
@@ -94,6 +99,16 @@ export default function CadastrarObra() {
     }
   };
 
+  const clientesOptions = clientes.map((u) => ({
+    value: u.id,
+    label: u.nome
+  }));
+
+  const responsaveisOptions = responsaveis.map((u) => ({
+    value: u.id,
+    label: u.nome
+  }));
+
   return (
     <div className="container-obra">
       <StatusToast
@@ -106,26 +121,26 @@ export default function CadastrarObra() {
         <div className="linha-dupla">
           <div className="campo">
             <label>Cliente:</label>
-            <select name="cliente" onChange={handleChange}>
-              <option value="">Escolha cliente</option>
-              {clientes.map((u) => (
-                <option key={u.id} value={u.id}>
-                  {u.nome}
-                </option>
-              ))}
-            </select>
+            <Select
+              options={clientesOptions}
+              placeholder="Escolha cliente"
+              isSearchable
+              onChange={(selected) =>
+                setForm({ ...form, cliente: selected.value })
+              }
+            />
           </div>
 
           <div className="campo">
             <label>Responsável técnico:</label>
-            <select name="responsavel" onChange={handleChange}>
-              <option value="">Escolha responsável</option>
-              {responsaveis.map((u) => (
-                <option key={u.id} value={u.id}>
-                  {u.nome}
-                </option>
-              ))}
-            </select>
+            <Select
+              options={responsaveisOptions}
+              placeholder="Escolha responsável"
+              isSearchable
+              onChange={(selected) =>
+                setForm({ ...form, responsavel: selected.value })
+              }
+            />
           </div>
         </div>
 

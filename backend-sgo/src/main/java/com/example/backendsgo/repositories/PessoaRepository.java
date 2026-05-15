@@ -11,5 +11,6 @@ import java.util.List;
 public interface PessoaRepository extends JpaRepository<Pessoa, Long> {
     public List<Pessoa> findByNomeContainingIgnoreCase(String nome);
 
-    public List<Pessoa> findByNivel(int nivel);
+    //public List<Pessoa> findByNivel(int nivel);
+    List<Pessoa> findByNivelOrderByNomeAsc(int nivel);
 }

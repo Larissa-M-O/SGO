@@ -91,7 +91,7 @@ export default function LayoutLateral() {
         </div>
       )}
 
-      <Link href={`/administrador/${usuario.id}/orcamentos`} className={itemClass("/orcamentos")}>
+      <Link href={`/administrador/${usuario.id}/orcamento`} className={itemClass("/orcamentos")}>
         <Icon src="/icons/orcamentos.png" />
         Orçamentos
       </Link>

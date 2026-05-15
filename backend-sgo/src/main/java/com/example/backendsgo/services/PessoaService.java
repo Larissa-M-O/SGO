@@ -359,7 +359,8 @@ public class PessoaService {
     }
 
     public List<Pessoa> pessoabyNivel(int nivel) {
-        List<Pessoa> pessoas = PessoaRepository.findByNivel(nivel);
+        //List<Pessoa> pessoas = PessoaRepository.findByNivel(nivel);
+        List<Pessoa> pessoas = PessoaRepository.findByNivelOrderByNomeAsc(nivel);
 
         if(pessoas.isEmpty()) {
             throw new NotFoundException("Erro ao encontrar Lista de Pessoas");

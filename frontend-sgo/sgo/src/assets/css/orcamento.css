@@ -1,0 +1,250 @@
+.container-orcamento {
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 30px;
+
+    background: #d7ebff;
+}
+
+.card-topo {
+    width: 100%;
+
+    background: #f5f5f5;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr;
+
+    gap: 20px;
+
+    align-items: end;
+
+    margin-bottom: 30px;
+
+    border: 2px solid #8f8f8f;
+    
+}
+
+.campo-select,
+.campo-custo,
+.campo-lucro {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.campo-select label,
+.campo-custo label,
+.campo-lucro label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.campo-custo input,
+.campo-lucro input {
+    height: 45px;
+
+    border: 2px solid #000;
+
+    padding: 10px;
+
+    font-size: 18px;
+}
+
+.btn-adicionar {
+    height: 45px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #09c35b;
+
+    color: white;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.lista-recursos {
+    width: 100%;
+
+    background: #ffffff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 2px solid #8f8f8f;
+
+    margin-bottom: 40px;
+}
+
+.item-recurso {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1fr 150px;
+
+    align-items: center;
+
+    padding: 20px;
+
+    border-bottom: 2px solid #b4b4b4;
+
+    font-size: 22px;
+
+    font-weight: bold;
+
+
+}
+
+
+.btn-remover {
+    height: 40px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #ff3838;
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.rodape-orcamento {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    gap: 30px;
+}
+
+.info-obra {
+    width: 450px;
+
+    background: #f5f5f5;
+
+    border-radius: 12px;
+
+    border: 2px solid #8f8f8f;
+
+    overflow: hidden;
+}
+
+.linha-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 20px;
+
+    border-bottom: 2px solid #b4b4b4;
+
+    font-size: 24px;
+}
+
+.linha-info span {
+    color: #00b74f;
+
+    font-weight: bold;
+}
+
+.card-final {
+    width: 420px;
+
+    background: #f5f5f5;
+
+    border-radius: 12px;
+
+    border: 2px solid #8f8f8f;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.card-final h2 {
+    font-size: 32px;
+}
+
+.valor-final {
+    width: 180px;
+
+    height: 55px;
+
+    border: 2px solid #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 28px;
+
+    font-weight: bold;
+
+    background: #dcdcdc;
+}
+
+.btn-confirmar {
+    height: 55px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #223d97;
+
+    color: white;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+@media (max-width: 900px) {
+
+    .card-topo {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-orcamento {
+        flex-direction: column;
+    }
+
+    .info-obra,
+    .card-final {
+        width: 100%;
+    }
+
+    .item-recurso {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+}
