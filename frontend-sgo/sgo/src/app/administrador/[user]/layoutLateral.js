@@ -96,7 +96,7 @@ export default function LayoutLateral() {
         Orçamentos
       </Link>
 
-      <Link href={`/administrador/${usuario.id}/relatorios`} className={itemClass("/relatorios")}>
+      <Link href={`/administrador/${usuario.id}/financeiro`} className={itemClass("/relatorios")}>
         <Icon src="/icons/financeiro.png" />
         Financeiro
       </Link>
